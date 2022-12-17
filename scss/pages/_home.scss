@@ -8,7 +8,7 @@ body {
 	@include centered-flex;
 	flex-direction: column;
 }
-
+/*LOCATION SECTION*/
 .location {
 	width: 100%;
 	height: 50px;
@@ -27,25 +27,27 @@ body {
 
 .fa-location-dot {}
 
+/*ABOUT SECTION*/
 .about {
 	width: 100%;
-	height: 280px;
+	padding: 15px;
 	background-color: map-get($map: $bg-color, $key: menu);
 	@include centered-flex;
 	flex-direction: column;
 	&__title {
 		text-align: center;
-		margin: 40px 45px 0;
+		margin: 15px 45px;
 	}
 	&__text {
 		font-weight: 300;
 		font-size: 18px;
 		line-height: 20px;
 		text-align: center;
-		padding: 10px 20px;
+		margin-bottom: 10px;
 	}
-
-	&__btn {}
+	&__btn {
+		margin: 20px 0;
+	}
 }
 // common to all titles of the home page:
 .title {
@@ -54,4 +56,44 @@ body {
 	line-height: 28px;
 }
 
-.button {}//faire dans les components
+/*HELP SECTION*/
+.help {
+	padding: 45px 0;
+
+	&__step {
+		width: 320px;
+		height: 70px;
+		font-weight: 500;
+		font-size: 16px;
+		@include centered-flex;
+		background-color: map-get($map: $bg-color, $key: menu);
+		border-radius: 25px;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+		margin: 25px 0;
+		position: relative;
+
+		&:hover {
+			@include btn-hover;
+			background-color: rgba(147, 86, 220, 0.1);
+		}
+	}
+
+	&__num {
+		background-color: $clr-primary;
+		width: 24px;
+		height: 24px;
+		color: #fff;
+		@include centered-flex;
+		font-size: 14px;
+		font-weight: 400;
+		border-radius: 50%;
+		position: absolute;
+		left: -10px;
+	}
+
+	&__icon {
+		margin-right: 25px;
+		scale: 1.1;
+		color: $bgclr-grey4;
+	}
+}
