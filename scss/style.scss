@@ -1,4 +1,19 @@
+@import "utils/mixins";
+@import "utils/variables";
+
 @import "base/normalize";
+@import "base/typography";
+
+@import "components/buttons";
+@import "components/cover";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/navigation";
+
+@import "pages/home";
+@import "pages/restaurants";
 
 
 

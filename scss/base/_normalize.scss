@@ -111,6 +111,7 @@ a:visited,
 a:hover {
 	background-color: transparent;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 /**
@@ -246,6 +247,7 @@ button,
 	appearance: button;
 	-webkit-appearance: button;
 }
+
 
 /**
  * Remove the inner border and padding in Firefox.

@@ -1,0 +1,21 @@
+//main colors:
+$clr-primary: #9356DC;
+$clr-secondary: #FF79DA;
+$clr-tertiary: #99E2D0;
+$gradient : linear-gradient(180deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+
+//background-colors:
+$bgclr-white: #fff;
+$bgclr-grey: #353535;
+$bgclr-grey1: #D2D2D2;
+$bgclr-grey2: #EAEAEA;
+$bgclr-grey3: #F6F6F6;
+
+//map for background colors:
+$bg-color: (
+	default: $bgclr-white,
+	main: $bgclr-grey1,
+	footer: $bgclr-grey,
+	menu: $bgclr-grey3,
+	location: $bgclr-grey2
+)
