@@ -5,6 +5,7 @@ body {
 }
 .main {
 	width: 100%;
+	margin: 0 auto;
 	@include centered-flex;
 	flex-direction: column;
 }
@@ -16,16 +17,10 @@ body {
 	background-color: map-get($map: $bg-color, $key: location);
 	font-weight: 500;
 	font-size: 16px;
-	&__icon {}
-
 	&__address {
 		margin-left: 12px;
 	}
 }
-
-.fa-solid {}
-
-.fa-location-dot {}
 
 /*ABOUT SECTION*/
 .about {
@@ -46,7 +41,7 @@ body {
 		margin-bottom: 10px;
 	}
 	&__btn {
-		margin: 20px 0;
+		margin: 20px 0 40px;
 	}
 }
 // common to all titles of the home page:
@@ -59,9 +54,17 @@ body {
 /*HELP SECTION*/
 .help {
 	padding: 45px 0;
-
+	@include centered-flex;
+	flex-direction: column;
+	&__title {
+		display: inline-flex;
+		align-self: flex-start;
+	}
+	&__steps {
+		padding-left: 20px;
+	}
 	&__step {
-		width: 320px;
+		width: 300px;
 		height: 70px;
 		font-weight: 500;
 		font-size: 16px;
@@ -71,7 +74,6 @@ body {
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 		margin: 25px 0;
 		position: relative;
-
 		&:hover {
 			@include btn-hover;
 			background-color: rgba(147, 86, 220, 0.1);
@@ -90,10 +92,80 @@ body {
 		position: absolute;
 		left: -10px;
 	}
-
 	&__icon {
 		margin-right: 25px;
 		scale: 1.1;
 		color: $bgclr-grey4;
+	}
+}
+
+/*RESTAURANTS SECTION*/
+.restaurants {
+	background-color: map-get($map: $bg-color, $key: menu);
+	padding: 50px 0;
+	&__title {
+		padding-left: 20px
+	}
+	&__container {
+		@include centered-flex;
+		flex-direction: column;
+		padding: 10px 20px;
+	}
+}
+
+.rest-card {
+	width: 335px;
+	height: 250px;
+	background-color: #fff;
+	border-radius: 20px;
+	margin: 10px 0;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	&__view {
+		height: 170px;
+		width: 100%;
+		position: relative;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px 20px 0 0;
+	}
+	&__new {
+		background-color: $clr-tertiary;
+		width: 80px;
+		height: 28px;
+		color: #008766;
+		font-weight: 500;
+		font-size: 14px;
+		@include centered-flex;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		border-radius: 3px;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 16px 20px 10px 12px;
+		color: black;
+	}
+	&__body {
+		
+	}
+
+	&__label {
+		font-weight: 700;
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+
+	&__address {
+		font-weight: 300;
+		font-size: 16px;
+	}
+
+	&__heart {
+		align-self: center;
 	}
 }
