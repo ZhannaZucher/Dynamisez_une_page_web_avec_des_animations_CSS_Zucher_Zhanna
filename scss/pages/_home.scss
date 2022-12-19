@@ -29,6 +29,7 @@ body {
 	background-color: map-get($map: $bg-color, $key: menu);
 	@include centered-flex;
 	flex-direction: column;
+
 	&__title {
 		text-align: center;
 		margin: 15px 45px;
@@ -51,17 +52,30 @@ body {
 	line-height: 28px;
 }
 
+#maintitle {
+	@include desktop {
+		font-size: 40px;
+		margin: 40px 0;
+	}
+}
+
 /*HELP SECTION*/
 .help {
 	padding: 45px 0;
 	@include centered-flex;
 	flex-direction: column;
 	&__title {
-		display: inline-flex;
-		align-self: flex-start;
+		margin-left: -140px;
+		@include desktop {
+			margin-left: 0;
+		}
 	}
 	&__steps {
 		padding-left: 20px;
+		@include desktop {
+			display: flex;
+			justify-content: space-evenly;
+		}
 	}
 	&__step {
 		width: 300px;
@@ -74,12 +88,18 @@ body {
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 		margin: 25px 0;
 		position: relative;
+		@include desktop {
+			flex: 0 1 30%;
+			margin: 40px 5px 30px;
+		}
 		&:hover {
 			@include btn-hover;
 			background-color: rgba(147, 86, 220, 0.1);
+			& > .help__icon {
+				color: $clr-primary;
+			}
 		}
 	}
-
 	&__num {
 		background-color: $clr-primary;
 		width: 24px;
@@ -94,22 +114,35 @@ body {
 	}
 	&__icon {
 		margin-right: 25px;
-		scale: 1.1;
+		//scale: 1.1;
+		font-size: 15px;
 		color: $bgclr-grey4;
 	}
 }
 
 /*RESTAURANTS SECTION*/
 .restaurants {
+	width: 100%;
 	background-color: map-get($map: $bg-color, $key: menu);
 	padding: 50px 0;
+	@include centered-flex;
+	flex-direction: column;
+	padding: 20px;
 	&__title {
-		padding-left: 20px
+		margin-left: -195px;
+		@include desktop {
+			margin-left: 0;
+		}
 	}
 	&__container {
 		@include centered-flex;
 		flex-direction: column;
 		padding: 10px 20px;
+		@include desktop {
+			width: 900px;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -120,6 +153,9 @@ body {
 	border-radius: 20px;
 	margin: 10px 0;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	@include desktop {
+		margin: 20px 20px;
+	}
 	&__view {
 		height: 170px;
 		width: 100%;
