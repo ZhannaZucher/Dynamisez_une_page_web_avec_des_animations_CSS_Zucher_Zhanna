@@ -28,8 +28,6 @@ main {
 	padding: 30px 17px 0;
 	background-color: #f7f7f7;
 	border-radius: 40px 40px 0 0;
-	//@include centered-flex;
-	//flex-direction: column;
 	&__label {
 		display: flex;
 		justify-content: space-between;
@@ -91,25 +89,48 @@ main {
 		border-radius: 16px;
 		box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 		margin: 6px 0;
-		padding: 10px;
+		display: flex;
+		justify-content: space-between;
 	}
-
+	&__option-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 10px;
+		flex: 1 1 60%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
 	&__option-title {
 		font-weight: 500;
 		font-size: 18px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	&__option-body p {
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	&__option-price {
+		align-self: flex-end;
+		font-weight: 700;
+		font-size: 15px;
+		margin: 0 15px 10px 15px;
 	}
 
-	&__option-body {}
-
-	&__option-price {}
-
-	&__validation-btn {}
+	&__validation-btn {
+		//display:none;
+		height: 70px;
+		width: 60px;
+		background-color: $clr-tertiary;
+		border-radius: 0 16px 16px 0;
+		@include centered-flex;
+	}
 }
-
-.fa-solid {}
-
-.fa-circle-check {}
-
+.fa-circle-check {
+	color: #fff;
+	font-size: larger;
+}
 .order-btn {
 	margin: 40px auto;
 }

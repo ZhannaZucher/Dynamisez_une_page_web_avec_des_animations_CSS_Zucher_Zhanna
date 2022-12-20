@@ -1,0 +1,17 @@
+div {
+	width: 22px;
+	height: 22px;
+	margin: 50px auto;
+}
+
+svg {
+	fill: transparent;
+	border: black;
+}
+
+svg:hover {
+fill:aqua;
+transition: 300ms;
+}
+
+
