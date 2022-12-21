@@ -5,7 +5,7 @@
 	align-items: center;
 };
 
-//mixins for main buttons:
+//mixins for main rose-violet button:
 @mixin btn {
 	background: $gradient;
 	color: #fff;
@@ -21,7 +21,7 @@
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
 };
 
-//responsive:
+//mixin for responsive:
 @mixin desktop {
 	@media screen and(min-width:map-get($breakpoints, desktop)) {
 		@content

@@ -1,4 +1,4 @@
-// styles for main rose gradient button:
+/*styles for main rose gradient button*/
 .button {
 	width: 220px;
 	height: 50px;
@@ -11,8 +11,7 @@
 	}
 }
 
-//styles for heart:
-
+/*styles for heart*/
 .rest-card__heart, .rest__heart {
 	i {
 		color: black;
@@ -23,7 +22,7 @@
 		background: $gradient;
 		color: white;
 		font-weight: 600;
-		transform: scale(1.2ii);
+		transform: scale(1.2);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

@@ -78,6 +78,8 @@ main {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		margin-top: 15px;
+		animation: menus 1s ease-in-out both;
 	}
 	&__option {
 		width: 100%;
@@ -95,8 +97,8 @@ main {
 			i {
 				animation: rotate 500ms 260ms both;
 			}
-			}
 		}
+	}
 	&__option-text {
 		display: flex;
 		flex-direction: column;
@@ -122,7 +124,6 @@ main {
 		font-size: 15px;
 		margin: 0 15px 10px 15px;
 	}
-
 	&__validation-btn {
 		height: 70px;
 		width: 60px;
@@ -131,6 +132,14 @@ main {
 		@include centered-flex;
 		margin-right: -60px;
 	}
+}
+
+/*rules for menus blocks appearing with delay*/
+.delay1 {
+	animation-delay: 800ms;
+}
+.delay2 {
+	animation-delay: 1600ms;
 }
 
 .fa-circle-check {
