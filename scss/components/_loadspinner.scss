@@ -1,0 +1,45 @@
+/*styles for LOAD SPINNER*/
+.load {
+	height: 100%;
+	background: white;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+	animation: spinner 3s linear;
+	visibility: hidden;
+}
+
+.load-spinner {
+	background: transparent;
+	position: absolute;
+	top: 37%;
+	left: 45%;
+	@include desktop {
+		left: 46%;
+		top: 48%;
+	}
+	width: 80px;
+	height: 80px;
+	z-index: 20;
+
+	&__circle--primary {
+		position: absolute;
+		border: 6px solid $clr-primary;
+		opacity: 1;
+		border-radius: 50%;
+		animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	}
+
+	&__circle--secondary {
+		position: absolute;
+		border: 6px solid $clr-tertiary;
+		opacity: 1;
+		border-radius: 50%;
+		animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+		animation-delay: -0.75s;
+	}
+}

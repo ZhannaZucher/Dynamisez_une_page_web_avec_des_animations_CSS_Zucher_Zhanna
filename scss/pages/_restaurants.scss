@@ -50,8 +50,6 @@ main {
 	}
 }
 
-.fa-heart {}
-
 .menu {
 	@include centered-flex;
 	flex-direction: column;
@@ -80,7 +78,6 @@ main {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-
 	}
 	&__option {
 		width: 100%;
@@ -91,7 +88,15 @@ main {
 		margin: 6px 0;
 		display: flex;
 		justify-content: space-between;
-	}
+		overflow: hidden;
+		&:hover .validation-btn {
+			cursor: pointer;
+			animation: validation 500ms ease-in forwards;
+			i {
+				animation: rotate 500ms 260ms both;
+			}
+			}
+		}
 	&__option-text {
 		display: flex;
 		flex-direction: column;
@@ -119,17 +124,19 @@ main {
 	}
 
 	&__validation-btn {
-		//display:none;
 		height: 70px;
 		width: 60px;
 		background-color: $clr-tertiary;
 		border-radius: 0 16px 16px 0;
 		@include centered-flex;
+		margin-right: -60px;
 	}
 }
+
 .fa-circle-check {
 	color: #fff;
 	font-size: larger;
+	transform: rotate(180deg);
 }
 .order-btn {
 	margin: 40px auto;

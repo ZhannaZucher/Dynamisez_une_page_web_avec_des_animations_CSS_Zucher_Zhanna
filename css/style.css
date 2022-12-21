@@ -1,3 +1,125 @@
+@-webkit-keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes load-spinner {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0.1;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+@keyframes load-spinner {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0.1;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes validation {
+  0% {
+    margin-right: -60 px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@keyframes validation {
+  0% {
+    margin-right: -60 px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /* Document
    ========================================================================== */
 * {
@@ -405,6 +527,77 @@ template {
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
   opacity: 0.8;
+}
+
+.rest-card__heart i, .rest__heart i {
+  color: black;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.rest-card__heart i:hover, .rest__heart i:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 121, 218)), to(rgb(147, 86, 220)));
+  background: -o-linear-gradient(top, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: white;
+  font-weight: 600;
+  -webkit-transform: scale(1.2ii);
+      -ms-transform: scale(1.2ii);
+          transform: scale(1.2ii);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*styles for LOAD SPINNER*/
+.load {
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  -webkit-animation: spinner 3s linear;
+          animation: spinner 3s linear;
+  visibility: hidden;
+}
+
+.load-spinner {
+  background: transparent;
+  position: absolute;
+  top: 37%;
+  left: 45%;
+  width: 80px;
+  height: 80px;
+  z-index: 20;
+}
+@media screen and (min-width: 900px) {
+  .load-spinner {
+    left: 46%;
+    top: 48%;
+  }
+}
+.load-spinner__circle--primary {
+  position: absolute;
+  border: 6px solid #9356DC;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.load-spinner__circle--secondary {
+  position: absolute;
+  border: 6px solid #99E2D0;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: load-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s;
 }
 
 .header {
@@ -983,6 +1176,16 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+}
+.menu__option:hover .validation-btn {
+  cursor: pointer;
+  -webkit-animation: validation 500ms ease-in forwards;
+          animation: validation 500ms ease-in forwards;
+}
+.menu__option:hover .validation-btn i {
+  -webkit-animation: rotate 500ms 260ms both;
+          animation: rotate 500ms 260ms both;
 }
 .menu__option-text {
   display: -webkit-box;
@@ -1035,11 +1238,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: -60px;
 }
 
 .fa-circle-check {
   color: #fff;
   font-size: larger;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .order-btn {

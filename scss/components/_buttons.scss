@@ -11,3 +11,20 @@
 	}
 }
 
+//styles for heart:
+
+.rest-card__heart, .rest__heart {
+	i {
+		color: black;
+		cursor: pointer;
+		transition: all 300ms ease-in-out;
+	}
+	i:hover {
+		background: $gradient;
+		color: white;
+		font-weight: 600;
+		transform: scale(1.2ii);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
