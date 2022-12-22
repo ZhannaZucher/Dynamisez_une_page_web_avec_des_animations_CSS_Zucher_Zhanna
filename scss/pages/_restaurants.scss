@@ -131,6 +131,9 @@ main {
 		border-radius: 0 16px 16px 0;
 		@include centered-flex;
 		margin-right: -60px;
+		i {
+			font-size: 26px;
+		}
 	}
 }
 

@@ -4,10 +4,9 @@
 	height: 50px;
 	@include centered-flex;
 	@include btn;
-	//margin: 20px 0;
 	&:hover {
-		@include btn-hover;
 		opacity: 0.8;
+		@include btn-hover;
 	}
 }
 
@@ -16,14 +15,15 @@
 	i {
 		color: black;
 		cursor: pointer;
-		transition: all 300ms ease-in-out;
+		transition: all ease-out 500ms;
 	}
 	i:hover {
 		background: $gradient;
 		color: white;
 		font-weight: 600;
-		transform: scale(1.2);
+		transform: scale(1.25);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
+		transition: all ease-in 400ms;
 	}
 }
