@@ -46,14 +46,18 @@
 }
 
 /*keyframes for menus' validation button*/
-@keyframes validation {
-	0% {
-		margin-right: -60px;
-	}
-	100% {
+@keyframes validation-in {
+	to {
 		margin-right: 0;
 	}
 }
+
+@keyframes validation-out {
+	to {
+		margin-right: -60px;
+	}
+}
+
 
 /*keyframes for icon rotation*/
 @keyframes rotate {
