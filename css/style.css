@@ -483,12 +483,6 @@ template {
   height: 80px;
   z-index: 20;
 }
-@media screen and (min-width: 900px) {
-  .load-spinner {
-    left: 46%;
-    top: 48%;
-  }
-}
 .load-spinner__circle--primary {
   position: absolute;
   border: 6px solid #9356DC;
