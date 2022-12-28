@@ -93,7 +93,7 @@ main {
 		overflow: hidden;
 		&:hover .validation-btn {
 			cursor: pointer;
-			animation: validation-in 500ms ease-in forwards;
+			animation: validation 500ms ease-in forwards;
 			i {
 				animation: rotate 500ms 260ms both;
 			}

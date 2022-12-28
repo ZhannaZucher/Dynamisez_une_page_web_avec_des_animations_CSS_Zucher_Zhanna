@@ -86,24 +86,14 @@
   }
 }
 /*keyframes for menus' validation button*/
-@-webkit-keyframes validation-in {
+@-webkit-keyframes validation {
   to {
     margin-right: 0;
   }
 }
-@keyframes validation-in {
+@keyframes validation {
   to {
     margin-right: 0;
-  }
-}
-@-webkit-keyframes validation-out {
-  to {
-    margin-right: -60px;
-  }
-}
-@keyframes validation-out {
-  to {
-    margin-right: -60px;
   }
 }
 /*keyframes for icon rotation*/
@@ -1101,8 +1091,8 @@ main {
 }
 .menu__option:hover .validation-btn {
   cursor: pointer;
-  -webkit-animation: validation-in 500ms ease-in forwards;
-          animation: validation-in 500ms ease-in forwards;
+  -webkit-animation: validation 500ms ease-in forwards;
+          animation: validation 500ms ease-in forwards;
 }
 .menu__option:hover .validation-btn i {
   -webkit-animation: rotate 500ms 260ms both;

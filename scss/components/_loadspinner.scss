@@ -10,7 +10,7 @@
 	bottom: 0;
 	z-index: 20;
 	animation: spinner 3s linear;
-	visibility: hidden;
+	visibility: hidden; //for disappearing after 3 sec
 }
 
 .load-spinner {
@@ -18,7 +18,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%); //better centering for responsive
 	width: 80px;
 	height: 80px;
 	z-index: 20;
