@@ -13,7 +13,7 @@ Ohmyfood is an application for meals booking in Parisian restaurants
 
 Figma prototype is [here](https://www.figma.com/proto/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=25368-591&scaling=scale-down&page-id=0%3A1&starting-point-node-id=25368%3A591&show-proto-sidebar=1)
 
-## Live demo is available [here](https://github.com/ZhannaZucher/Dynamisez_une_page_web_avec_des_animations_CSS_Zucher_Zhanna)
+## Live demo is available on Github Pages [here](https://zhannazucher.github.io/Dynamisez_une_page_web_avec_des_animations_CSS_Zucher_Zhanna/)
 
 ## Project constraints:
 
